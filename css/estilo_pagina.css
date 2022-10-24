@@ -1,0 +1,11 @@
+body,h1,h5 {font-family: "Raleway", sans-serif} body, html {height: 100%}.bgimg {
+
+    background-image: url('/img/fairy-tale-g0806f2fd4_1280.png');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.w3-lobster {
+    font-family: "Lobster", Sans-serif;
+}

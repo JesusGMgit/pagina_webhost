@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/estilo_pagina.css">
+        <script src="js/formularios.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+        <title>MUSICA</title>
+    </head>
+   
+    <body>
+        <div class="bgimg w3-display-container w3-text-white">
+            <div class="w3-display-middle w3-jumbo w3-lobster" >
+              <p><bold>MusicaJGM</bold></p>
+            </div>
+            <div class="w3-display-topleft w3-container w3-xlarge">
+              <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-orange">info</button></p>
+              <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-orange">email</button></p>
+              <p><button onclick="document.getElementById('whats').style.display='block'" class="w3-button w3-green" style="width: 18%;"><img class="w3-card" 
+                style="width:100%;" src="img/124034.png"></button></p>
+            </div>
+            <div class="w3-display-bottomleft w3-container">
+              <!--
+              <p class="w3-xlarge w3-blue">lunes - sabados 9 am - 14 pm</p>
+              <p class="w3-large w3-lime">aun sin local</p>
+              -->
+              <p>powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            </div>
+        </div>
+        <!-- Menu Modal -->
+        <div id="menu" class="w3-modal">
+          <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container w3-black w3-display-container">
+              <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+              <h1>Jugos </h1>
+            </div>
+            <div class="w3-container">
+              <h5>Jugo 1 </h5>
+              <h5>Jugo 2 </h5>
+              <h5>Jugo 3 </h5>
+              <h5>Presentacion medio litro <b>$10.00</b></h5>
+              <h5>Presentacion de litro <b>$18.00</b></h5>
+            </div>
+            <div class="w3-container w3-black">
+              <h1>Licuados</h1>
+            </div>
+            <div class="w3-container">
+              <h5>Presentacion de litro</h5>
+              <h5>Licuado 1 <b>$15.00</b></h5>
+              <h5>Licuado 2 <b>$20.00</b></h5>
+              <h5>Licuado 3 <b>$18.00</b></h5>
+              <h5>Licuado 4 <b>$22.00</b></h5>
+              <h5>Licuado 5 <b>$16.00</b></h5>
+            </div>
+            <div class="w3-container w3-black">
+              <h1>Postres?</h1>
+            </div>
+            <div class="w3-container">
+              <h5>Frutas <b>$12.00</b></h5>
+              <h5>yogurt con frutas <b>$10.00</b></h5>
+              <h5>Pastel chocolate (rebanada) <b>$12.00</b></h5>
+              <h5>Yogurt especial <b>$15.00</b></h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div id="contact" class="w3-modal">
+          <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container w3-black">
+              <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+              <h1>Contacto</h1>
+            </div>
+            <div class="w3-container">
+              <p>¿Quieres hacer tu pedido?, llena el formulario y tu dale enviar:</p>
+              <form id="formulario_contacto" action="php/contacto_email.php" method="POST">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="nombre"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Pedido" required name="pedido"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="tel" placeholder="Celular/Telefono" required name="tel"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="recibir en el local o Dirección" required name="direccion"></p>
+                <p><button class="w3-button" type="submit">Enviar mensaje</button></p>
+                <!--<p><a class="w3-button"  href="https://api.whatsapp.com/send?phone=5218331923114&text=Hola,%20¿Qué%20tal%20%estás?">Enviar</a></p>-->
+              </form>
+              <div class="w3-panel w3-orange" id="respuesta">
+                :)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- whats Modal -->
+        <div id="whats" class="w3-modal">
+          <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container w3-black">
+              <span onclick="document.getElementById('whats').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+              <h1>Contacto</h1>
+            </div>
+            <div class="w3-container">
+              <p>¿Quieres hacer tu pedido?, llena el formulario y tu dale enviar:</p>
+              <form id="formulario_contacto" action="contacto_p.php" method="POST">
+                <p><input id="nombre" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="nombre"></p>
+                <p><input id="pedido" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Pedido" required name="pedido"></p>
+                <p><input id="direccion" class="w3-input w3-padding-16 w3-border" type="text" placeholder="recibir en el local o Dirección" required name="direccion"></p>
+                <p><a id="link_w" href="" onclick="envio_w()" target="_blank" rel="noopener"class="w3-button w3-green">Enviar</a></p>
+              </form>
+              <div class="w3-panel w3-orange" id="respuesta_w">
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+</html>
